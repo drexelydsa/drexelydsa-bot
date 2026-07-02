@@ -9,3 +9,22 @@
  */
 require('dotenv').config();
 const { Client, GatewayIntentBits } = require('discord.js');
+
+// create client
+const client = new Client({
+    intents: [
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildMessages,
+        GatewayIntentBits.MessageContent
+    ]
+})
+
+// login to Discord
+client.once('ready', () => {
+    console.log(`Logged in as ${client.user.tag}!`);
+});
+
+// handle messages
+client.on('messageCreate', async (message) => {
+    if (message.author.bot) return; // ignore bot messages
+});
