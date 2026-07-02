@@ -7,8 +7,8 @@
  * 
  * This is a Discord bot that is meant to manage the Drexel YDSA Discord server. Solidarity forever!
  */
-require('dotenv').config();
-const { Client, GatewayIntentBits } = require('discord.js');
+import 'dotenv/config';
+import { Client, GatewayIntentBits } from 'discord.js';
 
 // create client
 const client = new Client({
