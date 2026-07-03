@@ -1,25 +1,16 @@
 {
   "name": "drexelydsa-bot",
-  "version": "1.0.0",
-  "description": "A bot for managing the Drexel YDSA server",
-  "homepage": "https://github.com/drexelydsa/drexelydsa-bot#readme",
-  "bugs": {
-    "url": "https://github.com/drexelydsa/drexelydsa-bot/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/drexelydsa/drexelydsa-bot.git"
-  },
-  "license": "MIT",
-  "author": "Abhi Ramachandran",
-  "type": "commonjs",
-  "main": "index.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "start": "wrangler dev",
+    "test": "vitest"
   },
-  "dependencies": {
-    "discord.js": "^14.26.4",
-    "dotenv": "^17.4.2",
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.12.4",
+    "vitest": "~3.2.0",
     "wrangler": "^4.106.0"
   }
 }
